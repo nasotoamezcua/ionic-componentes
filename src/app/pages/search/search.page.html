@@ -1,0 +1,30 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Regresar" color="primary" ></ion-back-button> <!-- mode="md" -->
+    </ion-buttons>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar 
+    placeholder="Buscar" 
+    animated 
+    inputmode="text"
+    (ionInput)="onSearchChange($event)" debounce="1000">
+  </ion-searchbar>
+  <!-- 
+    (ionInput) : El evento se ejecuta al momento de escribir
+    (ionChange): El evento se ejecuta al al hacer enter
+  -->
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item *ngFor="let albun of albunes | filtro:textoBuscar:'title'">
+      <ion-label>{{albun.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+ 
+</ion-content>

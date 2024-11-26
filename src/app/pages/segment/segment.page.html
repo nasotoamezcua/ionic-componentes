@@ -1,0 +1,96 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Regresar" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize">Segment</ion-title>
+  </ion-toolbar>
+
+  <ion-segment value="" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Marvel Comics">
+      <ion-label>Marvel Comics</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  
+  <ion-list>
+    <ion-item *ngFor="let heroe of (superHeroes | async) | filtro: publisher : 'publisher'" class="animate__animated animate__fadeIn animate__fast">
+      <ion-label>
+        <h3>{{heroe.superhero}} <small>{{heroe.alter_ego}}</small></h3>
+        <p>{{heroe.first_appearance}}</p>
+      </ion-label>
+
+      <ion-label slot="end" class="ion-text-right">{{heroe.publisher}}</ion-label>
+
+    </ion-item>
+  </ion-list>
+  
+
+   <ion-list *ngIf="(superHeroes | async) === null">
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1]">
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+
+      
+      <ion-skeleton-text slot="end" style="width: 50px; height: 50px;"></ion-skeleton-text>
+     
+
+    </ion-item>
+  </ion-list>
+
+
+  <!-- 
+  <ion-segment [scrollable]="true" value="heart">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="barbell">
+      <ion-icon name="barbell"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="trash">
+      <ion-icon name="trash"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="person">
+      <ion-icon name="person"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  -->
+
+</ion-content>

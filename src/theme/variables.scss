@@ -1,2 +1,175 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+
+:root {
+    /*
+	--ion-color-primary: #008080;
+	--ion-color-primary-rgb: 0,128,128;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #007171;
+	--ion-color-primary-tint: #1a8d8d;
+
+	--ion-color-secondary: #0163aa;
+	--ion-color-secondary-rgb: 1,99,170;
+	--ion-color-secondary-contrast: #ffffff;
+	--ion-color-secondary-contrast-rgb: 255,255,255;
+	--ion-color-secondary-shade: #015796;
+	--ion-color-secondary-tint: #1a73b3;
+
+	--ion-color-tertiary: #6030ff;
+	--ion-color-tertiary-rgb: 96,48,255;
+	--ion-color-tertiary-contrast: #ffffff;
+	--ion-color-tertiary-contrast-rgb: 255,255,255;
+	--ion-color-tertiary-shade: #542ae0;
+	--ion-color-tertiary-tint: #7045ff;
+
+	--ion-color-success: #2dd55b;
+	--ion-color-success-rgb: 45,213,91;
+	--ion-color-success-contrast: #000000;
+	--ion-color-success-contrast-rgb: 0,0,0;
+	--ion-color-success-shade: #28bb50;
+	--ion-color-success-tint: #42d96b;
+
+	--ion-color-warning: #ffc409;
+	--ion-color-warning-rgb: 255,196,9;
+	--ion-color-warning-contrast: #000000;
+	--ion-color-warning-contrast-rgb: 0,0,0;
+	--ion-color-warning-shade: #e0ac08;
+	--ion-color-warning-tint: #ffca22;
+
+	--ion-color-danger: #c5000f;
+	--ion-color-danger-rgb: 197,0,15;
+	--ion-color-danger-contrast: #ffffff;
+	--ion-color-danger-contrast-rgb: 255,255,255;
+	--ion-color-danger-shade: #ad000d;
+	--ion-color-danger-tint: #cb1a27;
+
+	--ion-color-light: #f6f8fc;
+	--ion-color-light-rgb: 246,248,252;
+	--ion-color-light-contrast: #000000;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #d8dade;
+	--ion-color-light-tint: #f7f9fc;
+
+	--ion-color-medium: #5f5f5f;
+	--ion-color-medium-rgb: 95,95,95;
+	--ion-color-medium-contrast: #ffffff;
+	--ion-color-medium-contrast-rgb: 255,255,255;
+	--ion-color-medium-shade: #545454;
+	--ion-color-medium-tint: #6f6f6f;
+
+	--ion-color-dark: #2f2f2f;
+	--ion-color-dark-rgb: 47,47,47;
+	--ion-color-dark-contrast: #ffffff;
+	--ion-color-dark-contrast-rgb: 255,255,255;
+	--ion-color-dark-shade: #292929;
+	--ion-color-dark-tint: #444444;
+    */
+
+    //Youtube
+    --ion-color-youtube: #ff0011;
+    --ion-color-youtube-rgb: 255,0,17;
+    --ion-color-youtube-contrast: #ffffff;
+    --ion-color-youtube-contrast-rgb: 255,255,255;
+    --ion-color-youtube-shade: #e0000f;
+    --ion-color-youtube-tint: #ff1a29;
+
+    //Twitter
+    --ion-color-twitter: #1DA1F2;
+	--ion-color-twitter-rgb: 29,161,242;
+	--ion-color-twitter-contrast: #ffffff;
+	--ion-color-twitter-contrast-rgb: 0,0,0;
+	--ion-color-twitter-shade: #1a8ed5;
+	--ion-color-twitter-tint: #34aaf3;
+
+    //FaceBook
+    --ion-color-facebook: #4267B2;
+	--ion-color-facebook-rgb: 66,103,178;
+	--ion-color-facebook-contrast: #ffffff;
+	--ion-color-facebook-contrast-rgb: 255,255,255;
+	--ion-color-facebook-shade: #3a5b9d;
+	--ion-color-facebook-tint: #5576ba;
+
+    //Vimeo
+    --ion-color-vimeo: #86c9ef;
+	--ion-color-vimeo-rgb: 134,201,239;
+	--ion-color-vimeo-contrast: #ffffff;
+	--ion-color-vimeo-contrast-rgb: 0,0,0;
+	--ion-color-vimeo-shade: #76b1d2;
+	--ion-color-vimeo-tint: #92cef1;
+
+    //Google
+    --ion-color-google: #F4B400;
+	--ion-color-google-rgb: 244,180,0;
+	--ion-color-google-contrast: #ffffff;
+	--ion-color-google-contrast-rgb: 0,0,0;
+	--ion-color-google-shade: #d79e00;
+	--ion-color-google-tint: #f5bc1a;
+
+    //GitHub
+    --ion-color-github: #2dba4e;
+	--ion-color-github-rgb: 45,186,78;
+	--ion-color-github-contrast: #ffffff;
+	--ion-color-github-contrast-rgb: 0,0,0;
+	--ion-color-github-shade: #28a445;
+	--ion-color-github-tint: #42c160;
+
+}
+
+  .ion-color-youtube {
+    --ion-color-base: var(--ion-color-youtube) !important;
+    --ion-color-base-rgb: var(--ion-color-youtube-rgb) !important;
+    --ion-color-contrast: var(--ion-color-youtube-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-youtube-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-youtube-shade) !important;
+    --ion-color-tint: var(--ion-color-youtube-tint) !important;
+  }
+
+  .ion-color-twitter {
+    --ion-color-base: var(--ion-color-twitter) !important;
+    --ion-color-base-rgb: var(--ion-color-twitter-rgb) !important;
+    --ion-color-contrast: var(--ion-color-twitter-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-twitter-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-twitter-shade) !important;
+    --ion-color-tint: var(--ion-color-twitter-tint) !important;
+  }
+
+  .ion-color-facebook {
+    --ion-color-base: var(--ion-color-facebook) !important;
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb) !important;
+    --ion-color-contrast: var(--ion-color-facebook-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-facebook-shade) !important;
+    --ion-color-tint: var(--ion-color-facebook-tint) !important;
+  }
+
+  .ion-color-vimeo {
+    --ion-color-base: var(--ion-color-vimeo) !important;
+    --ion-color-base-rgb: var(--ion-color-vimeo-rgb) !important;
+    --ion-color-contrast: var(--ion-color-vimeo-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-vimeo-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-vimeo-shade) !important;
+    --ion-color-tint: var(--ion-color-vimeo-tint) !important;
+  }
+
+  .ion-color-google {
+    --ion-color-base: var(--ion-color-google) !important;
+    --ion-color-base-rgb: var(--ion-color-google-rgb) !important;
+    --ion-color-contrast: var(--ion-color-google-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-google-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-google-shade) !important;
+    --ion-color-tint: var(--ion-color-google-tint) !important;
+  }
+
+  .ion-color-github {
+    --ion-color-base: var(--ion-color-github) !important;
+    --ion-color-base-rgb: var(--ion-color-github-rgb) !important;
+    --ion-color-contrast: var(--ion-color-github-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-github-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-github-shade) !important;
+    --ion-color-tint: var(--ion-color-github-tint) !important;
+  }
+    
+    

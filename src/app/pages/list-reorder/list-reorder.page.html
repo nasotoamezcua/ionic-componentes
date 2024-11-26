@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">list-reorder</ion-title>
+
+    <!-- Buton -->
+     <ion-buttons slot="end">
+      <ion-button (click)="inhabilitar()" color="{{bandera ? 'success':'danger'}}">
+        <ion-icon slot="end" name="{{icono}}"></ion-icon>
+        {{bandera ? 'Habilitar':'Inhabilitar'}}
+      </ion-button>
+     </ion-buttons>
+
+     
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  
+<ion-list>
+
+  <ion-reorder-group [disabled]="bandera" (ionItemReorder)="doReorder($event)">
+
+    <ion-item *ngFor="let personaje of personajes">
+      <ion-label>{{personaje}}</ion-label>
+      <ion-reorder slot="end">
+        <ion-icon name="repeat"></ion-icon>
+      </ion-reorder>
+    </ion-item>
+    
+  </ion-reorder-group>
+
+  
+</ion-list>
+
+</ion-content>

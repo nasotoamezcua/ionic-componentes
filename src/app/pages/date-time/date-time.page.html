@@ -1,0 +1,155 @@
+<app-header titulo="Date Time"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Datos de Nacimiento</ion-label>
+      
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+
+      <!-- En el curso el componente ion-datetime actualemte es el componente ion-datetime-button-->
+       <!-- https://ionicframework.com/docs/api/datetime-button -->
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime #datetime
+            id="datetime"
+            presentation="date-time"
+            [value]="fechaNaci.toISOString()"
+            (ionChange)="cambioFecha($event)"
+            [formatOptions]="{
+              date: {
+                weekday: 'long',
+                month: 'long',
+                day: '2-digit',
+              },
+                time: {
+                hour: '2-digit',
+                minute: '2-digit',
+              },
+            }"
+            [showDefaultButtons]="true" doneText="Aceptar" cancelText="Cancelar"
+          >
+          
+        </ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+
+      <!-- En el curso el componente ion-datetime actualemte es el componente ion-datetime-button-->
+       <!-- https://ionicframework.com/docs/api/datetime-button -->
+      <ion-datetime-button datetime="datetime5"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime #datetime
+            id="datetime5"
+            presentation="date-time"
+            [value]="fechaNaci.toISOString()"
+            (ionChange)="cambioFecha($event)"
+            [formatOptions]="{
+              date: {
+                weekday: 'long',
+                month: 'long',
+                day: '2-digit',
+              },
+                time: {
+                hour: '2-digit',
+                minute: '2-digit',
+              },
+            }"
+            
+          >
+          <ion-buttons slot="buttons">
+            <ion-button color="danger" (click)="datetime.reset()">Cancelar</ion-button>
+            <ion-button color="success" (click)="datetime.cancel()">Never mind</ion-button>
+            <ion-button color="primary" (click)="datetime.confirm()">Aceptar</ion-button>
+          </ion-buttons>
+        </ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+
+    </ion-item>
+
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+      
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+
+      <!-- En el curso el componente ion-datetime actualemte es el componente ion-datetime-button-->
+       <!-- https://ionicframework.com/docs/api/datetime-button -->
+      <ion-datetime-button datetime="datetime2"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="datetime2"
+            presentation="date"
+            min="2015-01-01" 
+            max="2025-12-31"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Min y Max</ion-label>
+
+      <!-- En el curso el componente ion-datetime actualemte es el componente ion-datetime-button-->
+       <!-- https://ionicframework.com/docs/api/datetime-button -->
+      <ion-datetime-button datetime="datetime3"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="datetime3"
+            presentation="month-year"
+            min="2015" 
+            max="2025"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Custom Options</ion-label>
+
+      <!-- En el curso el componente ion-datetime actualemte es el componente ion-datetime-button-->
+       <!-- https://ionicframework.com/docs/api/datetime-button -->
+      <ion-datetime-button datetime="datetime4"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            id="datetime4"
+            presentation=""
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
+    </ion-item>
+
+
+  </ion-list>
+ 
+</ion-content>
